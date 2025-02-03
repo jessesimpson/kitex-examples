@@ -30,3 +30,10 @@ func (s *HelloImpl) Echo(ctx context.Context, req *api.Request) (resp *api.Respo
 	resp = &api.Response{Message: req.Message}
 	return
 }
+
+// Add implements the HelloImpl interface.
+func (s *HelloImpl) Add(ctx context.Context, req *api.AddRequest) (resp *api.AddResponse, err error) {
+	// TODO: Your code here...
+	resp = &api.AddResponse{Sum: req.First + req.Second}
+	return
+}
